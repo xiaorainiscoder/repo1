@@ -18,6 +18,10 @@ public class RandomTest {
         n = n * 10;
         List<Integer> result = new ArrayList<Integer>();
         for (int j = 0 ; j < x ; j++) {
+            if (j == x - 1) {
+                result.add(n);
+                break;
+            }
             Random r = new Random();
             Integer maxR = n - (x - j) * 1;
             Integer b = ((maxR.equals(0)) ? (0) : (r.nextInt(maxR))) + 1;
